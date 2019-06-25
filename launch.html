@@ -178,40 +178,69 @@
 	<section id="fh5co-intro">
 		<div class="container">
 			<div class="row row-bottom-padded-lg">
-				<div class="fh5co-block to-animate" style="background-image: url(images/earth.jpg);">
+				<div class="fh5co-block to-animate" style="background-image: url(images/videogames.jpg);">
 					<div class="overlay-darker"></div>
 					<div class="overlay"></div>
 					<div class="fh5co-text">
-						<i class="fh5co-intro-icon icon-ghost"></i>
+						<i class="fh5co-intro-icon icon-game-controller"></i>
 						<h2>New projects</h2>
 						<p>Register a new project</p>
-						<p><a href="#" class="btn btn-primary">Go</a></p>
+						<p><a href="#openModal" class="btn btn-primary">Go</a></p>
 					</div>
 				</div>
-				<div class="fh5co-block to-animate" style="background-image: url(images/gamer.jpg);">
+				<div class="fh5co-block to-animate" style="background-image: url(images/cloud-computing.jpg);">
 					<div class="overlay-darker"></div>
 					<div class="overlay"></div>
 					<div class="fh5co-text">
 						<i class="fh5co-intro-icon icon-film"></i>
 						<h2>New departments</h2>
 						<p>Register a new department</p>
-						<p><a href="#" class="btn btn-primary">Go</a></p>
+						<p><a href="#opendepartment" class="btn btn-primary">Go</a></p>
 					</div>
 				</div>
-				<div class="fh5co-block to-animate" style="background-image: url(images/joystick.jpg);">
+				<div class="fh5co-block to-animate" style="background-image: url(images/employee2.jpg);">
 					<div class="overlay-darker"></div>
 					<div class="overlay"></div>
 					<div class="fh5co-text">
 						<i class="fh5co-intro-icon icon-user-follow"></i>
 						<h2>New employees</h2>
 						<p>Register a new employee</p>
-						<p><a href="#" class="btn btn-primary">Go</a></p>
+						<p><a href="#openemployee" class="btn btn-primary">Go</a></p>
+					</div>
+				</div>
+				<div class="fh5co-block to-animate" style="background-image: url(images/joystick3.jpeg);">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text">
+						<i class="fh5co-intro-icon icon-ghost"></i>
+						<h2>New clients</h2>
+						<p>Register a new distributor</p>
+						<p><a href="#openclient" class="btn btn-primary">Go</a></p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-
+		<div id="openModal" class ="contenedor">
+			<div>	
+		<div class="form__top">
+				<h3>Record the data of the new project:</h3>
+			</div>
+			<a href="#close" title="Close" class="close">X</a>
+				<form class="form__reg" id="formulario1" autocomplete = "off">
+					<h4><span>Name:</span></h4><input name="nombre" id="vg_nombre" class="input"
+						type="text"  required autofocus>
+					<h4><span>Genre:</span></h4><input name="genero" id="vg_genero" class="input"
+						style="min-width: 100%; width: 100%;" type="text" placeholder="Example: FPS, MOBA, RPG, MMORPG" required>
+					<h4>Release date:</h4><input name="lanzamiento" id="vg_lanzamiento" class="input"
+						style="min-width: 100%; width: 100%;" type="date" required>
+					<div class="btn__form">
+						<input class="btn btn-primary" id="btnSubmit" type="submit" value="Save">
+						<input class="btn btn-primary" type="reset" value="Reset data">
+					</div>
+				</form>
+			</div>
+		</div>
 	<section id="fh5co-contact" data-section="contact">
 		<div class="container">
 			<div class="row row-bottom-padded-md">
