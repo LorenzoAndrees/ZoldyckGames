@@ -1,11 +1,11 @@
 from config import *
 import psycopg2
 
-conn = psycopg2.connect("dbname=%s user=%s password=%s"%(db_zoldyck,postgres,user56))
+conn = psycopg2.connect(database="db_zoldyck",user="postgres",password="user56",port=5432)
 cur = conn.cursor()
 
 sql = """
-insert into DEPARTAMENTO (codigo, rut_jefe, area) values (1, '9290307145', 'Business Development');
+insert into "DEPARTAMENTO" (codigo, rut_jefe, area) values (1, '9290307145', 'Business Development');
 insert into DEPARTAMENTO (codigo, rut_jefe, area) values (2, '8312881115', 'Accounting');
 insert into DEPARTAMENTO (codigo, rut_jefe, area) values (3, '7152677409', 'Services');
 insert into DEPARTAMENTO (codigo, rut_jefe, area) values (4, '9072631196', 'Business Development');

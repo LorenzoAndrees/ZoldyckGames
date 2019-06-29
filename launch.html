@@ -185,7 +185,7 @@
 						<i class="fh5co-intro-icon icon-game-controller"></i>
 						<h2>New projects</h2>
 						<p>Register a new project</p>
-						<p><a href="#openModal" class="btn btn-primary">Go</a></p>
+						<p><a href="#openProject" class="btn btn-primary">Go</a></p>
 					</div>
 				</div>
 				<div class="fh5co-block to-animate" style="background-image: url(images/cloud-computing.jpg);">
@@ -195,7 +195,7 @@
 						<i class="fh5co-intro-icon icon-film"></i>
 						<h2>New departments</h2>
 						<p>Register a new department</p>
-						<p><a href="#opendepartment" class="btn btn-primary">Go</a></p>
+						<p><a href="#openDepto" class="btn btn-primary">Go</a></p>
 					</div>
 				</div>
 				<div class="fh5co-block to-animate" style="background-image: url(images/employee2.jpg);">
@@ -205,7 +205,7 @@
 						<i class="fh5co-intro-icon icon-user-follow"></i>
 						<h2>New employees</h2>
 						<p>Register a new employee</p>
-						<p><a href="#openemployee" class="btn btn-primary">Go</a></p>
+						<p><a href="#openEmployee" class="btn btn-primary">Go</a></p>
 					</div>
 				</div>
 				<div class="fh5co-block to-animate" style="background-image: url(images/joystick3.jpeg);">
@@ -221,19 +221,66 @@
 			</div>
 		</div>
 	</section>
-		<div id="openModal" class ="contenedor">
+		<div id="openProject" class ="contenedor">
 			<div>	
 		<div class="form__top">
 				<h3>Record the data of the new project:</h3>
 			</div>
 			<a href="#close" title="Close" class="close">X</a>
 				<form class="form__reg" id="formulario1" autocomplete = "off">
-					<h4><span>Name:</span></h4><input name="nombre" id="vg_nombre" class="input"
+					<h4><span>Name:</span></h4><input name="nombre" id="VIDEOJUEGO.nombre" class="input"
 						type="text"  required autofocus>
-					<h4><span>Genre:</span></h4><input name="genero" id="vg_genero" class="input"
-						style="min-width: 100%; width: 100%;" type="text" placeholder="Example: FPS, MOBA, RPG, MMORPG" required>
-					<h4>Release date:</h4><input name="lanzamiento" id="vg_lanzamiento" class="input"
+					<h4><span>Genre:</span></h4><input name="genero" id="VIDEOJUEGO.genero" class="input"
+						style="min-width: 100%; width: 100%;" type="text" placeholder="FPS, MOBA, RPG, MMORPG" required>
+					<h4>Release date:</h4><input name="lanzamiento" id="VIDEOJUEGO.lanzamiento" class="input"
 						style="min-width: 100%; width: 100%;" type="date" required>
+					<div class="btn__form">
+						<input class="btn btn-primary" id="btnSubmit" type="submit" value="Save">
+						<input class="btn btn-primary" type="reset" value="Reset data">
+					</div>
+				</form>
+			</div>
+		</div>
+		
+		<div id="openDepto" class ="contenedor">
+			<div>	
+		<div class="form__top">
+				<h3>Record the data of the new department:</h3>
+			</div>
+			<a href="#close" title="Close" class="close">X</a>
+				<form class="form__reg" id="formulario1" autocomplete = "off">
+					<h4><span>Code:</span></h4><input name="codigo" id="DEPARTAMENTO.codigo" class="input"
+						type=number placeholder="0,1,2,3,4" required autofocus>
+					<h4><span>Boss RUN:</span></h4><input name="rut" id="DEPARTAMENTO.rut_jefe" class="input"
+						style="min-width: 100%; width: 100%;" type=number placeholder="70455669" required>
+					<h4>Area:</h4><input name="area" id="DEPARTAMENTO.area" class="input"
+						style="min-width: 100%; width: 100%;" type="text" placeholder="Marketing" required>
+					<div class="btn__form">
+						<input class="btn btn-primary" id="btnSubmit" type="submit" value="Save">
+						<input class="btn btn-primary" type="reset" value="Reset data">
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div id="openEmployee" class ="contenedor">
+			<div>	
+		<div class="form__top">
+				<h3>Record the data of the new employee:</h3>
+			</div>
+			<a href="#close" title="Close" class="close">X</a>
+				<form class="form__reg" id="formulario1" autocomplete = "off">
+					<h4><span>Nombre:</span></h4><input name="nombre" id="EMPLEADO.nombre" class="input"
+						type="text" placeholder="Alexis Rojas" required autofocus>
+					<h4><span>RUN:</span></h4><input name="run" id="EMPLEADO.rut" class="input"
+						style="min-width: 100%; width: 100%;" type=number placeholder="70455669" required>
+					<h4>Profesión:</h4><input name="profesion" id="EMPLEADO.profesion" class="input"
+						style="min-width: 100%; width: 100%;" type="text" placeholder="Graphic Designer" required>
+					<h4><span>Salary:</span></h4><input name="sueldo" id="EMPLEADO.sueldo" class="input"
+						type=number placeholder="1200000" required autofocus>
+					<h4>Office code:</h4><input name="codigo" id="EMPLEADO.codigo_oficina" class="input"
+						style="min-width: 100%; width: 100%;" type=numer placeholder="0,521,699,1021" required>
+
 					<div class="btn__form">
 						<input class="btn btn-primary" id="btnSubmit" type="submit" value="Save">
 						<input class="btn btn-primary" type="reset" value="Reset data">
