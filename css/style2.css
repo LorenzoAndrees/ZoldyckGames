@@ -702,7 +702,7 @@
   margin: .5rem 0;
   margin-top: -5%;
 	border: none;
-	border-bottom: solid #C8C8C8 .5rem;
+	border-bottom: solid #C8C8C8 .2rem;
 	transition: all .5s;
 }
   .form__reg {
@@ -743,6 +743,7 @@
     position: relative;
     margin: 10% auto;
     padding: 5px 20px 13px 20px;
+    margin-top: 1%;
     border-radius: 10px;
     background:rgb(255, 255, 255);
     -webkit-transition: opacity 400ms ease-in;

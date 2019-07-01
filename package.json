@@ -1,0 +1,24 @@
+{
+  "name": "zoldyckgames",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index_zoldyck.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "launch": "node launch.js",
+    "managment": "node managment.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LorenzoAndrees/ZoldyckGames.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LorenzoAndrees/ZoldyckGames/issues"
+  },
+  "homepage": "https://github.com/LorenzoAndrees/ZoldyckGames#readme",
+  "dependencies": {
+    "pg": "^7.11.0"
+  }
+}

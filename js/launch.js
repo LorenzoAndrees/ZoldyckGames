@@ -1,38 +1,48 @@
-; (function () {
+const {Client} = require('pg')
+const client = new Client({
+    user: "postgres",
+    password: "user56",
+    host: "localhost",
+    database: "db_zoldyck",
+    port: 5432
+})
+var http = require('http').createServer(webServer),
+    form = require('fs').readFileSync('launch.html'),
+    querystring = require('querystring'),
+    util = require('util'),
+    dataString = ''
 
-	'use strict';
-    var clicklaunch = function () {
+function webServer(req, res){
+    if(req.method == 'GET'){
+        res.writeHead(200,{'Content-Type': 'text/html'})
+        res.end(form)
+    }
+    if(req.method = 'POST'){
+        req
+            .on('data', function(data){
+            dataString += data
+        })
+            .on('end',function(){
+            executeprojects()
+        })
+    }
+}
+http.listen(3000)
 
-		// Get the modal
-		var modal = document.getElementById("modallaunch");
-
-		// Get the button that opens the modal
-		var btn = document.getElementById("btn3");
-
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
-
-		// When the user clicks on the button, open the modal 
-		btn.onclick = function () {
-			modal.style.display = "block";
-		}
-
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function () {
-			modal.style.display = "none";
-		}
-
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function (event) {
-			if (event.target == modal) {
-				modal.style.display = "none";
-			}
-		}
-	};
-
-    	// Document on load.
-	$(function () {
-		clicklaunch();
-	});
-
-}());
+async function executeprojects(){
+    try{
+        await client.connect()
+        console.log("Connected successfully.")
+        client.query("BEGIN")
+        client.query("INSERT into VIDEOJUEGO values ($1,$2,$3,$4,$5)",[getElementById(),,,,])
+        client.query("COMMIT")
+    }
+    catch(ex){
+        console.log('Ups! Something wrong happened. '+ ex)
+        client.query("ROLLBACK")
+    }
+    finally{
+        await client.end()
+        console.log("Client disconnected successfully.")
+    }
+}
